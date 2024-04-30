@@ -1,10 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
 .banner {
-    background-color: #f0f0f0;
+    background-color: #1900ff; 
     padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: rgb(255, 255, 255);
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 
 button {
-    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+p {
+    margin: 5px 0;
 }

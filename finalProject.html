@@ -1,3 +1,6 @@
+<!-- Created bt Artemio Madrigal Cortez -->
+<!-- Course: WEB115 Section 6 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +20,36 @@
     <form id="mealPlanForm">
         <label for="name">Name:</label>
         <input type="text" id="name" required><br>
-
+    
         <label for="email">Email:</label>
         <input type="email" id="email" required><br>
-
+    
         <label for="goal">Goal for the Week:</label>
         <textarea id="goal" rows="4" required></textarea><br>
-
+    
         <h3>Meal Plan for the Week</h3>
-        <label for="mondayBreakfast">Monday Breakfast:</label>
-        <input type="text" id="mondayBreakfast"><br>
-        <!-- Will either loop here or copy and paste for the rest of the weekdays -->
-
+    
+        <!-- Loop for each day of the week -->
+        <script>
+            var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    
+            daysOfWeek.forEach(function(day) {
+                document.write('<h4>' + day.toUpperCase() + '</h4>');
+    
+                // Loop for each meal
+                var meals = ['Breakfast', 'Snack1', 'Lunch', 'Snack2', 'Dinner'];
+                meals.forEach(function(meal) {
+                    var elementId = day.toLowerCase() + meal;
+                    document.write('<label for="' + elementId + '">' + meal + ':</label>');
+                    document.write('<input type="text" id="' + elementId + '"><br>');
+                });
+            });
+        </script>
+    
         <button type="button" onclick="generateMealPlan()">Generate Meal Plan</button>
         <button type="button" onclick="clearMealPlan()">Clear Meal Plan</button>
     </form>
+    
 
     <script src="projectJS.js"></script>
 </body>
